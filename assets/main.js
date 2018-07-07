@@ -35,13 +35,16 @@ window.onload = function() {
 				finishMessage.textContent = "Your time is up!";
 				finishMessage.className = "finish";
 				messageContainer.appendChild(finishMessage);
+				//make start button reappear when timer has passed
+				startBtn.style.opacity = 1;
 				startBtn.innerHTML = "Restart Game";
 			}
 		}, time);
 	}
 
 	function startGame() {
-		startBtn.innerHTML = "Start Game";
+		//make the start button disappear to make sure the user does not start more than one session of the game at once
+		startBtn.style.opacity = 0;
 		// Remove finish game message, if game has been restarted
 		messageContainer.childNodes[0] && messageContainer.removeChild(messageContainer.childNodes[0]);
 		scoreContainer.textContent = 0;

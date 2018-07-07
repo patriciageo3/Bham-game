@@ -50,6 +50,7 @@ main {
 	font-size: 30px;
 	cursor: pointer;
 	box-shadow: 7px 7px 5px rgba(0,0,0, .6);
+	transition: all .7s ease-in;
 }
 
 #start_btn:active {
